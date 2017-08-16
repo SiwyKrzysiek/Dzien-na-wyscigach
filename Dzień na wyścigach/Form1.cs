@@ -12,6 +12,9 @@ namespace Dzień_na_wyścigach
 {
     public partial class Form1 : Form
     {
+        private Hound[] dogs;
+        private Guy[] players;
+
         public Form1()
         {
             InitializeComponent();

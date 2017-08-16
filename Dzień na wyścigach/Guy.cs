@@ -29,7 +29,20 @@ namespace Dzień_na_wyścigach
 
         public bool PlaceBet(int amount, int dogToWin)
         {
+            if (amount <= Chash)
+            {
+                MyBet = new Bet(amount, dogToWin, this);
+                return true;
+            }
+            else
+                return false;
+        }
 
+        public void Collect(int winner)
+        {
+            Chash += MyBet.PayOut(winner);
+            UpdateLables();
+            
         }
     }
 }
