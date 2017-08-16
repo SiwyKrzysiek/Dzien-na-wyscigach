@@ -24,7 +24,7 @@ namespace Dzień_na_wyścigach
             if (Amount > 0)
                 return Bettor.Name + " postawił " + Amount.ToString("C") + " na psa numer " + (Dog + 1);
             else
-                return Bettor.Name + " nie zawarł zakładu"
+                return Bettor.Name + " nie zawarł zakładu";
         }
 
         public int PayOut(int Winner)

@@ -19,5 +19,7 @@ namespace Dzień_na_wyścigach
         {
             InitializeComponent();
         }
+
+
     }
 }
