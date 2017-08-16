@@ -13,7 +13,14 @@ namespace Dzień_na_wyścigach
         public int RacetrackLength;
         public PictureBox MyPictureBox;
         public int Location = 0;
-        public static Random MyRandom;
+        public static Random MyRandom = new Random();
+
+        public Hound(PictureBox pictureBox, int trackLength)
+        {
+            StartingPosition = pictureBox.Left;
+            RacetrackLength = trackLength;
+            MyPictureBox = pictureBox;
+        }
 
         public bool Run()
         {

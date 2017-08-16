@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.bettingHouseGroupBox = new System.Windows.Forms.GroupBox();
+            this.betMoneyNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.makeBettButton = new System.Windows.Forms.Button();
+            this.pickedGuyNameLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.alBetLabel = new System.Windows.Forms.Label();
             this.joeBetLabel = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@
             this.minimumBetLabel = new System.Windows.Forms.Label();
             this.raceTrackPictureBox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.pickHoundNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.dog1pictureBox = new System.Windows.Forms.PictureBox();
             this.dog2pictureBox = new System.Windows.Forms.PictureBox();
             this.dog3pictureBox = new System.Windows.Forms.PictureBox();
             this.dog4pictureBox = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.bettingHouseGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.betMoneyNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raceTrackPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickHoundNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog1pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog2pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog3pictureBox)).BeginInit();
@@ -64,54 +64,57 @@
             // timer
             // 
             this.timer.Interval = 5;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // groupBox1
+            // bettingHouseGroupBox
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.startButton);
-            this.groupBox1.Controls.Add(this.alBetLabel);
-            this.groupBox1.Controls.Add(this.joeBetLabel);
-            this.groupBox1.Controls.Add(this.alRadioButton);
-            this.groupBox1.Controls.Add(this.bobRadioButton);
-            this.groupBox1.Controls.Add(this.joeRadioButton);
-            this.groupBox1.Controls.Add(this.bobBetLabel);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.minimumBetLabel);
-            this.groupBox1.Location = new System.Drawing.Point(12, 207);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(750, 183);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dom bukmacherski";
+            this.bettingHouseGroupBox.Controls.Add(this.pickHoundNumericUpDown);
+            this.bettingHouseGroupBox.Controls.Add(this.label3);
+            this.bettingHouseGroupBox.Controls.Add(this.betMoneyNumericUpDown);
+            this.bettingHouseGroupBox.Controls.Add(this.makeBettButton);
+            this.bettingHouseGroupBox.Controls.Add(this.pickedGuyNameLabel);
+            this.bettingHouseGroupBox.Controls.Add(this.startButton);
+            this.bettingHouseGroupBox.Controls.Add(this.alBetLabel);
+            this.bettingHouseGroupBox.Controls.Add(this.joeBetLabel);
+            this.bettingHouseGroupBox.Controls.Add(this.alRadioButton);
+            this.bettingHouseGroupBox.Controls.Add(this.bobRadioButton);
+            this.bettingHouseGroupBox.Controls.Add(this.joeRadioButton);
+            this.bettingHouseGroupBox.Controls.Add(this.bobBetLabel);
+            this.bettingHouseGroupBox.Controls.Add(this.label1);
+            this.bettingHouseGroupBox.Controls.Add(this.minimumBetLabel);
+            this.bettingHouseGroupBox.Location = new System.Drawing.Point(12, 207);
+            this.bettingHouseGroupBox.Name = "bettingHouseGroupBox";
+            this.bettingHouseGroupBox.Size = new System.Drawing.Size(750, 183);
+            this.bettingHouseGroupBox.TabIndex = 0;
+            this.bettingHouseGroupBox.TabStop = false;
+            this.bettingHouseGroupBox.Text = "Dom bukmacherski";
             // 
-            // numericUpDown1
+            // betMoneyNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(122, 148);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(58, 20);
-            this.numericUpDown1.TabIndex = 11;
+            this.betMoneyNumericUpDown.Location = new System.Drawing.Point(122, 148);
+            this.betMoneyNumericUpDown.Name = "betMoneyNumericUpDown";
+            this.betMoneyNumericUpDown.Size = new System.Drawing.Size(58, 20);
+            this.betMoneyNumericUpDown.TabIndex = 11;
             // 
-            // button1
+            // makeBettButton
             // 
-            this.button1.Location = new System.Drawing.Point(62, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 20);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "stawia";
-            this.button1.UseVisualStyleBackColor = true;
+            this.makeBettButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.makeBettButton.Location = new System.Drawing.Point(62, 148);
+            this.makeBettButton.Name = "makeBettButton";
+            this.makeBettButton.Size = new System.Drawing.Size(54, 20);
+            this.makeBettButton.TabIndex = 10;
+            this.makeBettButton.Text = "stawia";
+            this.makeBettButton.UseVisualStyleBackColor = false;
+            this.makeBettButton.Click += new System.EventHandler(this.makeBettButton_Click);
             // 
-            // label2
+            // pickedGuyNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "name";
+            this.pickedGuyNameLabel.AutoSize = true;
+            this.pickedGuyNameLabel.Location = new System.Drawing.Point(18, 152);
+            this.pickedGuyNameLabel.Name = "pickedGuyNameLabel";
+            this.pickedGuyNameLabel.Size = new System.Drawing.Size(33, 13);
+            this.pickedGuyNameLabel.TabIndex = 9;
+            this.pickedGuyNameLabel.Text = "name";
             // 
             // startButton
             // 
@@ -122,6 +125,7 @@
             this.startButton.TabIndex = 8;
             this.startButton.Text = "Start!";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // alBetLabel
             // 
@@ -150,6 +154,7 @@
             this.alRadioButton.TabIndex = 3;
             this.alRadioButton.Text = "alRadioButton";
             this.alRadioButton.UseVisualStyleBackColor = true;
+            this.alRadioButton.CheckedChanged += new System.EventHandler(this.alRadioButton_CheckedChanged);
             // 
             // bobRadioButton
             // 
@@ -160,6 +165,7 @@
             this.bobRadioButton.TabIndex = 2;
             this.bobRadioButton.Text = "bobRadioButton";
             this.bobRadioButton.UseVisualStyleBackColor = true;
+            this.bobRadioButton.CheckedChanged += new System.EventHandler(this.bobRadioButton_CheckedChanged);
             // 
             // joeRadioButton
             // 
@@ -172,6 +178,7 @@
             this.joeRadioButton.TabStop = true;
             this.joeRadioButton.Text = "joeRadioButton";
             this.joeRadioButton.UseVisualStyleBackColor = true;
+            this.joeRadioButton.CheckedChanged += new System.EventHandler(this.joeRadioButton_CheckedChanged);
             // 
             // bobBetLabel
             // 
@@ -222,23 +229,23 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "zł na charta numer";
             // 
-            // numericUpDown2
+            // pickHoundNumericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(291, 148);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.pickHoundNumericUpDown.Location = new System.Drawing.Point(291, 148);
+            this.pickHoundNumericUpDown.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.pickHoundNumericUpDown.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(33, 20);
-            this.numericUpDown2.TabIndex = 13;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.pickHoundNumericUpDown.Name = "pickHoundNumericUpDown";
+            this.pickHoundNumericUpDown.Size = new System.Drawing.Size(33, 20);
+            this.pickHoundNumericUpDown.TabIndex = 13;
+            this.pickHoundNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -252,6 +259,7 @@
             this.dog1pictureBox.Size = new System.Drawing.Size(79, 24);
             this.dog1pictureBox.TabIndex = 2;
             this.dog1pictureBox.TabStop = false;
+            this.dog1pictureBox.Click += new System.EventHandler(this.dog1pictureBox_Click);
             // 
             // dog2pictureBox
             // 
@@ -261,6 +269,7 @@
             this.dog2pictureBox.Size = new System.Drawing.Size(79, 23);
             this.dog2pictureBox.TabIndex = 3;
             this.dog2pictureBox.TabStop = false;
+            this.dog2pictureBox.Click += new System.EventHandler(this.dog2pictureBox_Click);
             // 
             // dog3pictureBox
             // 
@@ -270,6 +279,7 @@
             this.dog3pictureBox.Size = new System.Drawing.Size(79, 23);
             this.dog3pictureBox.TabIndex = 4;
             this.dog3pictureBox.TabStop = false;
+            this.dog3pictureBox.Click += new System.EventHandler(this.dog3pictureBox_Click);
             // 
             // dog4pictureBox
             // 
@@ -279,6 +289,7 @@
             this.dog4pictureBox.Size = new System.Drawing.Size(79, 23);
             this.dog4pictureBox.TabIndex = 5;
             this.dog4pictureBox.TabStop = false;
+            this.dog4pictureBox.Click += new System.EventHandler(this.dog4pictureBox_Click);
             // 
             // Form1
             // 
@@ -290,18 +301,18 @@
             this.Controls.Add(this.dog2pictureBox);
             this.Controls.Add(this.dog1pictureBox);
             this.Controls.Add(this.raceTrackPictureBox);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.bettingHouseGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Dzień na wyścigach";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.bettingHouseGroupBox.ResumeLayout(false);
+            this.bettingHouseGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.betMoneyNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.raceTrackPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickHoundNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog1pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog2pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dog3pictureBox)).EndInit();
@@ -313,10 +324,10 @@
         #endregion
 
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox bettingHouseGroupBox;
+        private System.Windows.Forms.NumericUpDown betMoneyNumericUpDown;
+        private System.Windows.Forms.Button makeBettButton;
+        private System.Windows.Forms.Label pickedGuyNameLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label alBetLabel;
         private System.Windows.Forms.Label joeBetLabel;
@@ -327,7 +338,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label minimumBetLabel;
         private System.Windows.Forms.PictureBox raceTrackPictureBox;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown pickHoundNumericUpDown;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox dog1pictureBox;
         private System.Windows.Forms.PictureBox dog2pictureBox;

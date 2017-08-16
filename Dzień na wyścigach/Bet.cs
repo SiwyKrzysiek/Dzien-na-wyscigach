@@ -22,7 +22,7 @@ namespace Dzień_na_wyścigach
         public String GetDescripion()
         {
             if (Amount > 0)
-                return Bettor.Name + " postawił " + Amount.ToString("C") + " na psa numer " + (Dog + 1);
+                return Bettor.Name + " postawił " + Amount.ToString("C0") + " na psa numer " + (Dog + 1);
             else
                 return Bettor.Name + " nie zawarł zakładu";
         }

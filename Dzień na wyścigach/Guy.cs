@@ -16,10 +16,21 @@ namespace Dzień_na_wyścigach
         public RadioButton MyRadioButton;
         public Label MyLabel;
 
+        public Guy(string name, int chash, RadioButton button, Label label)
+        {
+            this.Name = name;
+            this.Chash = chash;
+            MyBet = new Bet(0, 0, this);
+            MyRadioButton = button;
+            MyLabel = label;
+
+            UpdateLables();
+        }
+
         public void UpdateLables()
         {
             MyLabel.Text = MyBet.GetDescripion();
-            MyRadioButton.Text = Name + " ma " + Chash.ToString("C");
+            MyRadioButton.Text = Name + " ma " + Chash.ToString("C0");
         }
 
         public void ClearBet()
@@ -32,6 +43,7 @@ namespace Dzień_na_wyścigach
             if (amount <= Chash)
             {
                 MyBet = new Bet(amount, dogToWin, this);
+                UpdateLables();
                 return true;
             }
             else
